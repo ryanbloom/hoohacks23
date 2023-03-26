@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		343841D829CF863900B8B8F6 /* SmartCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343841D729CF863900B8B8F6 /* SmartCardsApp.swift */; };
+		343841DA29CF863900B8B8F6 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343841D929CF863900B8B8F6 /* AddCardView.swift */; };
+		343841DC29CF863B00B8B8F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343841DB29CF863B00B8B8F6 /* Assets.xcassets */; };
+		343841DF29CF863B00B8B8F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343841DE29CF863B00B8B8F6 /* Preview Assets.xcassets */; };
+		343841E729CF868700B8B8F6 /* smartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343841E629CF868700B8B8F6 /* smartCard.swift */; };
+		343841EA29CF86D000B8B8F6 /* OpenAIConnector.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343841E929CF86D000B8B8F6 /* OpenAIConnector.swift.swift */; };
+		343841EC29CF8B4600B8B8F6 /* OpenAIResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343841EB29CF8B4600B8B8F6 /* OpenAIResponseHandler.swift */; };
+		343841EF29CF8E6900B8B8F6 /* SmartCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343841EE29CF8E6900B8B8F6 /* SmartCardsViewModel.swift */; };
+		343841F629CFAAEC00B8B8F6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343841F529CFAAEC00B8B8F6 /* MainView.swift */; };
+		343841F829CFABCE00B8B8F6 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343841F729CFABCE00B8B8F6 /* FlashCard.swift */; };
+		343841FA29CFABEA00B8B8F6 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343841F929CFABEA00B8B8F6 /* LibraryView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		343841D429CF863900B8B8F6 /* SmartCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		343841D729CF863900B8B8F6 /* SmartCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCardsApp.swift; sourceTree = "<group>"; };
+		343841D929CF863900B8B8F6 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
+		343841DB29CF863B00B8B8F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		343841DE29CF863B00B8B8F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		343841E629CF868700B8B8F6 /* smartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smartCard.swift; sourceTree = "<group>"; };
+		343841E929CF86D000B8B8F6 /* OpenAIConnector.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIConnector.swift.swift; sourceTree = "<group>"; };
+		343841EB29CF8B4600B8B8F6 /* OpenAIResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIResponseHandler.swift; sourceTree = "<group>"; };
+		343841EE29CF8E6900B8B8F6 /* SmartCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCardsViewModel.swift; sourceTree = "<group>"; };
+		343841F529CFAAEC00B8B8F6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		343841F729CFABCE00B8B8F6 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
+		343841F929CFABEA00B8B8F6 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		343841FD29CFCF8200B8B8F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		343841D129CF863900B8B8F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		343841CB29CF863900B8B8F6 = {
+			isa = PBXGroup;
+			children = (
+				343841D629CF863900B8B8F6 /* SmartCards */,
+				343841D529CF863900B8B8F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		343841D529CF863900B8B8F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				343841D429CF863900B8B8F6 /* SmartCards.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		343841D629CF863900B8B8F6 /* SmartCards */ = {
+			isa = PBXGroup;
+			children = (
+				34C4FDFA29D075500022FAE9 /* LibraryView */,
+				343841FD29CFCF8200B8B8F6 /* Info.plist */,
+				343841F529CFAAEC00B8B8F6 /* MainView.swift */,
+				343841F929CFABEA00B8B8F6 /* LibraryView.swift */,
+				343841F729CFABCE00B8B8F6 /* FlashCard.swift */,
+				343841F429CF9C1900B8B8F6 /* AddQuestionView */,
+				343841E529CF867B00B8B8F6 /* ViewModel */,
+				343841E829CF868C00B8B8F6 /* Models */,
+				343841ED29CF8E3E00B8B8F6 /* OpenAIServices */,
+				343841DB29CF863B00B8B8F6 /* Assets.xcassets */,
+				343841DD29CF863B00B8B8F6 /* Preview Content */,
+			);
+			path = SmartCards;
+			sourceTree = "<group>";
+		};
+		343841DD29CF863B00B8B8F6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				343841DE29CF863B00B8B8F6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		343841E529CF867B00B8B8F6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				343841EE29CF8E6900B8B8F6 /* SmartCardsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		343841E829CF868C00B8B8F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				343841E629CF868700B8B8F6 /* smartCard.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		343841ED29CF8E3E00B8B8F6 /* OpenAIServices */ = {
+			isa = PBXGroup;
+			children = (
+				343841E929CF86D000B8B8F6 /* OpenAIConnector.swift.swift */,
+				343841EB29CF8B4600B8B8F6 /* OpenAIResponseHandler.swift */,
+			);
+			path = OpenAIServices;
+			sourceTree = "<group>";
+		};
+		343841F429CF9C1900B8B8F6 /* AddQuestionView */ = {
+			isa = PBXGroup;
+			children = (
+				343841D729CF863900B8B8F6 /* SmartCardsApp.swift */,
+				343841D929CF863900B8B8F6 /* AddCardView.swift */,
+			);
+			path = AddQuestionView;
+			sourceTree = "<group>";
+		};
+		34C4FDFA29D075500022FAE9 /* LibraryView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LibraryView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		343841D329CF863900B8B8F6 /* SmartCards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 343841E229CF863B00B8B8F6 /* Build configuration list for PBXNativeTarget "SmartCards" */;
+			buildPhases = (
+				343841D029CF863900B8B8F6 /* Sources */,
+				343841D129CF863900B8B8F6 /* Frameworks */,
+				343841D229CF863900B8B8F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartCards;
+			productName = SmartCards;
+			productReference = 343841D429CF863900B8B8F6 /* SmartCards.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		343841CC29CF863900B8B8F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					343841D329CF863900B8B8F6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 343841CF29CF863900B8B8F6 /* Build configuration list for PBXProject "SmartCards" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 343841CB29CF863900B8B8F6;
+			productRefGroup = 343841D529CF863900B8B8F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				343841D329CF863900B8B8F6 /* SmartCards */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		343841D229CF863900B8B8F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				343841DF29CF863B00B8B8F6 /* Preview Assets.xcassets in Resources */,
+				343841DC29CF863B00B8B8F6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		343841D029CF863900B8B8F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				343841EF29CF8E6900B8B8F6 /* SmartCardsViewModel.swift in Sources */,
+				343841F629CFAAEC00B8B8F6 /* MainView.swift in Sources */,
+				343841F829CFABCE00B8B8F6 /* FlashCard.swift in Sources */,
+				343841DA29CF863900B8B8F6 /* AddCardView.swift in Sources */,
+				343841FA29CFABEA00B8B8F6 /* LibraryView.swift in Sources */,
+				343841EA29CF86D000B8B8F6 /* OpenAIConnector.swift.swift in Sources */,
+				343841E729CF868700B8B8F6 /* smartCard.swift in Sources */,
+				343841D829CF863900B8B8F6 /* SmartCardsApp.swift in Sources */,
+				343841EC29CF8B4600B8B8F6 /* OpenAIResponseHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		343841E029CF863B00B8B8F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		343841E129CF863B00B8B8F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		343841E329CF863B00B8B8F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartCards/Preview Content\"";
+				DEVELOPMENT_TEAM = 6C894L8XAD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartCards/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Wmwang.co.SmartCards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		343841E429CF863B00B8B8F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartCards/Preview Content\"";
+				DEVELOPMENT_TEAM = 6C894L8XAD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartCards/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Wmwang.co.SmartCards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		343841CF29CF863900B8B8F6 /* Build configuration list for PBXProject "SmartCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				343841E029CF863B00B8B8F6 /* Debug */,
+				343841E129CF863B00B8B8F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		343841E229CF863B00B8B8F6 /* Build configuration list for PBXNativeTarget "SmartCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				343841E329CF863B00B8B8F6 /* Debug */,
+				343841E429CF863B00B8B8F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 343841CC29CF863900B8B8F6 /* Project object */;
+}
