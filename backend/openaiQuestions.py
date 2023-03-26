@@ -1,7 +1,7 @@
 from datetime import datetime
 import openai
 import os
-from fastapi import FastAPI
+from fastapi import Body, FastAPI
 from typing import Dict, List, Optional
 from pydantic import BaseModel
 import uvicorn
@@ -110,18 +110,31 @@ Please generate a list of flashcards that covers the same information. Write eac
 Do you understand the instructions?
 """
 
+class GenerateRequest(BaseModel):
+    url: str
+
 @app.post("/generate-url")
-def generate_url(url:str):
+def generate_url(req: GenerateRequest = Body()):
+    url = req.url
     article = Article(url)
     article.download()
+    article.parse()
+    print('ARTICLE TEXT:')
+    print(article.text)
+    text = article.text[:3000]
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        messages=chat_history(generate_url_prompt, article.text)
+        messages=chat_history(generate_url_prompt, text)
     )
     output_gpt: str = str(response['choices'][0]['message']['content'])
     new_cards = []
     for line in output_gpt.split('\n'):
-        [front, back] = line.split(' | ')
+        parts = line.split(' | ')
+        if len(parts) == 2:
+            [front, back] = parts
+        else:
+            front = line
+            back = "(No back)"
         new_cards.append(Flashcard(front=front, back=back))
     return new_cards
 

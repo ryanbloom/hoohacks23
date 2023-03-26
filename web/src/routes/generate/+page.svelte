@@ -6,20 +6,41 @@
 
     function generate() {
         loading = true;
-        fetch('http://localhost:8000/generate/?prompts=' + prompt)
-            .then(response => response.text())
-            .then(text => {
-                let newCard = {
-                    'front': prompt,
-                    'back': text,
-                    'id': $nextId,
-                    'dateLastStudied': 'dateLastStudied'
-                }
-                console.log(newCard);
-                nextId.update(id => id + 1)
-                cards.update(c => [...c, newCard])
-                loading = false;
+        let json_object = {
+            'url': prompt
+        };
+
+        // Post json_object to the api endpoint
+        fetch('http://localhost:8000/generate-url', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(json_object)
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Add the cards to the store
+                cards.update(cards => {
+                    console.log('old cards', cards)
+                    console.log('data', data)
+                    let newCards = [];
+                    for (let card of data) {
+                        newCards.push({
+                            id: $nextId,
+                            front: card.front,
+                            back: card.back,
+                            dynamic: card.dynamic
+                        });
+                        nextId.update(id => id + 1);
+                    }
+                    console.log('new cards', newCards)
+                    return [...cards, ...newCards];
+                })
             })
+            .then(_ => {
+                loading = false;
+            });
     }
 </script>
 <h2>Generate cards</h2>
