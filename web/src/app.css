@@ -1,0 +1,17 @@
+html {
+    font-family: Verdana;
+}
+
+body {
+    background-image: url('bg.jpg');
+    color: white;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;    
+}
+
+a, a:visited {
+    color: white;
+}
