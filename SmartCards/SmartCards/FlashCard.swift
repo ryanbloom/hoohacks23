@@ -107,6 +107,7 @@ struct FlashCard: View {
                     vm.cardsNotKnownTotal -= 1
                 } label: {
                     Text("Know")
+                        .foregroundColor(.black)
                 }.buttonStyle(.bordered)
                 Spacer()
             }
