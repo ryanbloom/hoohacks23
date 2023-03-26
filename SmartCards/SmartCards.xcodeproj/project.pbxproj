@@ -66,7 +66,6 @@
 		343841D629CF863900B8B8F6 /* SmartCards */ = {
 			isa = PBXGroup;
 			children = (
-				34C4FDFA29D075500022FAE9 /* LibraryView */,
 				343841FD29CFCF8200B8B8F6 /* Info.plist */,
 				343841F529CFAAEC00B8B8F6 /* MainView.swift */,
 				343841F929CFABEA00B8B8F6 /* LibraryView.swift */,
@@ -121,13 +120,6 @@
 				343841D929CF863900B8B8F6 /* AddCardView.swift */,
 			);
 			path = AddQuestionView;
-			sourceTree = "<group>";
-		};
-		34C4FDFA29D075500022FAE9 /* LibraryView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LibraryView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
