@@ -13,7 +13,6 @@ struct MainView: View {
     var body: some View {
         TabView {
             AddCardView(vm: vm)
-                .badge(2)
                 .tabItem {
                     Label("Create smartCard", systemImage: "plus")
                 }
