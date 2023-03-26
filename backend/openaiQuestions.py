@@ -5,9 +5,26 @@ from typing import Dict
 import requests
 from pydantic import BaseModel
 import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
+import sys
+
+
+
+
+origins = ["*"]
+
+
 
 app = FastAPI()
 flash_cards: Dict[str, str] = {}
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 @app.post("/addflash/")
 async def add_flashcard(question: str, answer: str):
@@ -20,7 +37,8 @@ async def get_flashcards():
 
 
 
-openai.api_key = "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"
+openai.api_key = sys.argv[1]
+print(openai.api_key)
 flash_cards: dict[str, str] = {}
 
 @app.get("/generate/")
