@@ -1,0 +1,2 @@
+https://medium.com/codex/how-to-integrate-openais-gpt-3-in-swift-337973ce209c
+- Getting chatGBT api
