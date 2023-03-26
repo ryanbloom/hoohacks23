@@ -44,9 +44,14 @@
     }
 </script>
 <h2>Generate cards</h2>
-
-<input type='text' bind:value={prompt} />
-<button on:click={generate}>Generate card!</button>
+<div style='display:flex; flex-direction:column'>
+<input type='text' placeholder='Paste article URL' bind:value={prompt} />
+<div class="button-container">
+<button on:click={generate}>Generate flashcards</button>
+</div>
 {#if loading}
-    <p>Loading...</p>
+    <p>Analyzing article...</p>
 {/if}
+
+</div>
+<style></style>

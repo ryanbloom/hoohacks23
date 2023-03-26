@@ -6,5 +6,10 @@
 </main>
 
 <script>
-    import '../app.css'
+    import '../app.css';
 </script>
+<style>
+h1 {
+    text-align: center;
+}
+</style>

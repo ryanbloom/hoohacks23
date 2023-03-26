@@ -27,25 +27,25 @@
     }
 </script>
 
-<h2>Add some cards</h2>
-
 <!-- Center everything inside this div -->
 <div class='outer'>
-    <div>
-        <input bind:value={front}>
-        <input bind:value={back}>
+    <div style='display:flex;flex-direction:column;width:500px;'>
+        <input placeholder="Front" bind:value={front}>
+        <input placeholder="Back" bind:value={back}>
     </div>
-    <div>
+    <div class="button-container">
         <button on:click={click}>Create Card</button>
         <a href='/'><button>Go back home</button></a>
     </div>
-    <div class='card-list'>
-    <ul>
-        {#each cardsData as card}
-            <li>{card.id}: {card.front} | {card.back}</li>
-        {/each}
-        </ul>
-    </div>
+    {#if cardsData.length > 0}
+        <div class='card-list'>
+            <ul>
+                {#each cardsData as card}
+                    <li>{card.id}: {card.front} | {card.back}</li>
+                {/each}
+            </ul>
+        </div>
+    {/if}
 </div>
 
 <style>
@@ -56,8 +56,7 @@
     }
 
     input {
-        width: 150px;
-        height: 50px;
+        width: 300;
     }
 
     button {

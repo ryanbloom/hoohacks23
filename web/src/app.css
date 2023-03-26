@@ -3,6 +3,16 @@ html {
     font-family: Verdana;
 }
 
+button {
+    background: rgba(0, 0, 0, 0.5);
+    border: solid white 2px;
+    color: white;
+    height: 50px;
+    flex-grow: 1;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
 body {
     display:flex;
     height:100%;
@@ -23,4 +33,19 @@ main {
 
 a, a:visited {
     color: white;
+}
+
+.button-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+}
+a {
+    text-decoration: none;
+}
+
+input {
+    height: 50px;
+    width: 300px;
 }

@@ -1,11 +1,11 @@
-<ul>
-    <li>
+<div>
+    <button>
         <a href="/add">Add cards</a>
-    </li>
-    <li>
+    </button>
+    <button>
         <a href="/generate">Generate cards from article</a>
-    </li>
-    <li>
+    </button>
+    <button>
         <a href="/study">Study all</a>
-    </li>
-</ul>
+    </button>
+</div>

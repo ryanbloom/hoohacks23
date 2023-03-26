@@ -37,8 +37,6 @@
     }
 </script>
 
-<h2>Study cards</h2>
-
 {#if cardIndex < 0}
     <h2>Click next to begin</h2>
 {:else if cardIndex >= cardsData.length}
@@ -63,14 +61,6 @@
     <button on:click={reset}>Start over</button>
 </div>
 <style>
-    button {
-        background: rgba(0, 0, 0, 0.5);
-        border: solid white 2px;
-        color: white;
-        height: 50px;
-        flex-grow: 1;
-        margin: 0 10px;
-    }
     .card {
         background: rgba(0, 0, 0, 0.5);
         border: solid white 2px;
@@ -92,10 +82,5 @@
     .card-back {
         border-top: solid white 2px;
     }
-    .button-container {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        display: flex;
-        flex-direction: row;
-    }
+
 </style>
