@@ -85,6 +85,7 @@ struct FlashCard: View {
                     }
                 } label: {
                     Text("Don't Know")
+                        .foregroundColor(.black)
                 }
                 .buttonStyle(.bordered)
                 Spacer()
