@@ -13,6 +13,14 @@
         isRevealed = !isRevealed;
     }
 
+    function previousCard() {
+        if (cardIndex > 0) {
+            cardIndex--;
+            card = $cards[cardIndex];
+            isRevealed = false;
+        }
+    }
+
     function nextCard() {
         if (cardIndex < cardsData.length) {
             cardIndex++;
@@ -42,24 +50,29 @@
     </div>
     {#if isRevealed}
         <div class="card-back">
+            <hr>
             <h1>{card.back}</h1>
         </div>
     {/if}
 </div>
 {/if}
+<button on:click={previousCard}>Previous card</button>
 <button on:click={nextCard}>Next card</button>
 <button on:click={reset}>Start over</button>
 
 <style>
     button {
-        width: 32%;
-        height: 12%;
+        background: rgba(0, 0, 0, 0.5);
+        border: solid white 2px;
+        color: white;
+        width: 150px;
+        height: 50px;
     }
     .card {
         background: rgba(0, 0, 0, 0.5);
         border: solid white 2px;
         border-radius: 6px;
-        width: 96%;
-        height: 84%;
+        width: 450px;
+        height: 150px;
     }
 </style>
