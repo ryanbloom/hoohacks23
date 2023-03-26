@@ -67,8 +67,9 @@
         background: rgba(0, 0, 0, 0.5);
         border: solid white 2px;
         color: white;
-        width: 150px;
         height: 50px;
+        flex-grow: 1;
+        margin: 0 10px;
     }
     .card {
         background: rgba(0, 0, 0, 0.5);
@@ -94,5 +95,7 @@
     .button-container {
         padding-top: 40px;
         padding-bottom: 40px;
+        display: flex;
+        flex-direction: row;
     }
 </style>
