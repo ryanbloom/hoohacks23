@@ -11,7 +11,7 @@
         };
 
         // Post json_object to the api endpoint
-        fetch('http://fastapi-projectgpt.herokuapp.com/generate-url', {
+        fetch('https://fastapi-projectgpt.herokuapp.com/generate-url', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
