@@ -11,10 +11,23 @@ struct FlashCard: View {
     @StateObject var vm: smartCardsViewModel
     
     @State var toggleButton = false
+    @State var currentCard = 0
     
     var body: some View {
         VStack {
-            Text("Cards Left: \(vm.cardList.count)")
+            HStack{
+                Text("Cards Left: \(vm.cardList.count)")
+                Button{
+                    for i in vm.cardList.indices{
+                        vm.cardList[i].isKnown = false
+                    }
+                }label: {
+                    Text("Reset")
+                        .foregroundColor(.black)
+                }
+                .buttonStyle(.bordered)
+            }
+                
             
             Spacer()
             
@@ -28,9 +41,17 @@ struct FlashCard: View {
                         .padding(.horizontal, 40)
                         .padding(.vertical, 50)
                         .foregroundColor(.white)
-                    Text(toggleButton ? "Answer: \(vm.cardList.count)" : "Question: \(vm.cardList.count)")
-                        .font(.title2)
-                        .foregroundColor(.black)
+                    
+                    if vm.cardsTotal > 0{
+                        Text(toggleButton ? "Answer: \(vm.cardList[currentCard].answer)" : "Question: \(vm.cardList[currentCard].question)")
+                            .font(.title2)
+                            .foregroundColor(.black)
+                    } else{
+                        Text("You're done!")
+                            .foregroundColor(.black)
+                            .font(.title)
+                    }
+                    
                 }
                 .gesture(DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
                     .onEnded { value in
@@ -47,12 +68,46 @@ struct FlashCard: View {
             Spacer()
             
             HStack {
-                Button {} label: {
+                Spacer()
+                Button {
+                    toggleButton = false
+                    
+                    if currentCard < vm.cardsTotal {
+                        if currentCard == vm.cardsTotal - 1 {
+                            currentCard = 0
+                        } else if vm.cardsNotKnownTotal != 1 {
+                            currentCard+=1
+                        }
+                    }
+                    
+                    while vm.cardList[currentCard].isKnown == true && currentCard < vm.cardsTotal - 1 {
+                        currentCard+=1
+                    }
+                } label: {
                     Text("Don't Know")
                 }
-                Button {} label: {
+                .buttonStyle(.bordered)
+                Spacer()
+                    
+                Button {
+                    toggleButton = false
+                    
+                    if currentCard < vm.cardsTotal {
+                        if currentCard == vm.cardsTotal - 1 {
+                            currentCard = 0
+                        } else if vm.cardsNotKnownTotal != 1 {
+                            currentCard+=1
+                        }
+                    }
+                    
+                    while vm.cardList[currentCard].isKnown == true && currentCard < vm.cardsTotal - 1 {
+                        currentCard+=1
+                    }
+                    vm.cardsNotKnownTotal -= 1
+                } label: {
                     Text("Know")
-                }
+                }.buttonStyle(.bordered)
+                Spacer()
             }
         }
     }

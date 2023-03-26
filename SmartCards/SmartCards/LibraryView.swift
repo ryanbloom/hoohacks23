@@ -16,9 +16,13 @@ struct LibraryView: View {
                     ForEach(vm.cardList) { cards in
 
                         NavigationLink {
-                            VStack {
-                                Text("Question : \(cards.question)")
-                                Text("Answer \(cards.answer)")
+                            List {
+                                Section("Question"){
+                                    Text("Question : \(cards.question)")
+                                }
+                                Section("Answer"){
+                                    Text("Question : \(cards.question)")
+                                }
                             }
                         } label: {
                             Text("\(cards.answer)")

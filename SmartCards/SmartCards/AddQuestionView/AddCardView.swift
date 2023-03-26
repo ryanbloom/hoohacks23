@@ -22,12 +22,15 @@ struct AddCardView: View {
                 
                 Section("TERM") {
                     TextField("Enter Term here", text: $vm.questionText)
+                        .focused($nameIsFocused)
                 }
                 Section("Answer") {
                     TextField("Enter Answer Here!", text: $vm.answerText)
                         .focused($nameIsFocused)
                     Button {
                         tempList = []
+                        vm.cardsNotKnownTotal += 1
+                        vm.cardsTotal += 1
                         vm.cardList.append(smartCard(question: vm.questionText, answer: vm.answerText))
                         nameIsFocused = false
                             
@@ -54,6 +57,8 @@ struct AddCardView: View {
                     ForEach(tempList, id: \.self) { card in
                         
                         Button {
+                            vm.cardsTotal += 1
+                            vm.cardsNotKnownTotal += 1
                             vm.cardList.append(smartCard(question: vm.questionText, answer: card.answer))
                         } label: {
                             Text(card.answer.trimmingCharacters(in: .whitespacesAndNewlines))

@@ -13,6 +13,14 @@ class smartCardsViewModel: ObservableObject {
     @Published var answerText = ""
     @Published var index = 0
     @Published var cardList: [smartCard] = []
+    @Published var currentCard = 0
+    @Published var cardsTotal = 0
+    @Published var cardsNotKnownTotal = 0
+    
+    
+    
+    
+    
 
     func AIGenerate(prompt: String) -> String {
         guard let answer = OpenAIConnector().processPrompt(prompt: "\(prompt)") else { fatalError("Invalid URl") }
